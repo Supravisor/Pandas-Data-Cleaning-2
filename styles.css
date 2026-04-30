@@ -8,3 +8,38 @@ h1 {
   font-family: Corbel;
   text-align: center;
 }
+
+table {
+  margin: auto;
+}
+
+#buttons {
+  background: LightBlue;
+  padding: 10px;  
+}
+
+#preview {
+  height: 70vh;
+  border-radius: 7px;
+  background: rgb(150, 150, 150);
+}
+
+#buttons, #preview {
+  width: 38vw;
+  border: 3px solid black;
+  color: black;
+}
+
+#textbox {
+  position: fixed;
+  padding-left: 5vw;
+  background-color: transparent;
+}
+
+#empty {
+  width: 45vw;
+}
+
+td {
+  vertical-align: top;
+}
