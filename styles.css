@@ -55,6 +55,12 @@ td {
   border-style: solid;
 }
 
+input {
+  padding: 2px 3px;
+  margin-left: 6px;
+  margin-bottom: 6px;
+}
+
 .btn-module {
   background: #FFE873;
 }
