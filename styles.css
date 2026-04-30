@@ -39,3 +39,7 @@ table {
 #empty {
   width: 45vw;
 }
+
+td {
+  vertical-align: top;
+}
