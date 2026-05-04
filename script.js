@@ -27,3 +27,7 @@ const replace = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "['" + columnUnique.value + "']." + arg + "('" + oldValue.value + "', '" + newValue.value + 	"')";
   }
 }
+
+const replaceDictionary = () => {
+  document.editor.textbox.value+="\ndf" + "['Gender'].replace({'D': 'F', 'N': 'M'})";
+}
