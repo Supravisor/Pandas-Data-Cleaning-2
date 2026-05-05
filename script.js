@@ -31,3 +31,7 @@ const replace = (arg) => {
 const replaceDictionary = () => {
   document.editor.textbox.value+="\ndf" + "['Gender'].replace({'D': 'F', 'N': 'M'})";
 }
+
+const replaceDataFrame = () => {
+  document.editor.textbox.value+="\ndf.replace({\n    'Sex': {\n        'D': 'F',\n        'N': 'M'\n    },\n    'Age': {\n        290: 29\n    }\n})";
+}
