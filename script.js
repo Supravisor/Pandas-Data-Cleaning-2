@@ -15,6 +15,7 @@ const unique = (arg) => {
 
 // Replace values
 let oldValue = document.getElementById("oldValue");
+let newValue = document.getElementById("newValue");
 
 const replace = (arg) => {
   if (variableUnique.value === "") {
@@ -37,3 +38,4 @@ const replaceDictionary = () => {
 const replaceDataFrame = () => {
   document.editor.textbox.value+="\ndf.replace({\n    'Sex': {\n        'D': 'F',\n        'N': 'M'\n    },\n    'Age': {\n        290: 29\n    }\n})";
 }
+
