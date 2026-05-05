@@ -12,3 +12,22 @@ const unique = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "['" + columnUnique.value + "']." + arg;
   }
 }
+
+// Replace values
+const replace = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (columnUnique.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Find unique values' section.");
+  } else if (oldValue.value === "") {
+    return alert("Please enter the old value in the 'old value' field, in the 'Replace values' section.");
+  } else if (newValue.value === "") {
+    return alert("Please enter the new value in the 'new value' field, in the 'Replace values' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variableUnique.value + "['" + columnUnique.value + "']." + arg + "('" + oldValue.value + "', '" + newValue.value + 	"')";
+  }
+}
+
+const replaceDictionary = () => {
+  document.editor.textbox.value+="\ndf" + "['Gender'].replace({'D': 'F', 'N': 'M'})";
+}
