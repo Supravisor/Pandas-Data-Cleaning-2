@@ -14,6 +14,8 @@ const unique = (arg) => {
 }
 
 // Replace values
+let oldValue = document.getElementById("oldValue");
+
 const replace = (arg) => {
   if (variableUnique.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
