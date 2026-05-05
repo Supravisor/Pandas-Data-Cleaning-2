@@ -39,3 +39,17 @@ const replaceDataFrame = () => {
   document.editor.textbox.value+="\ndf.replace({\n    'Sex': {\n        'D': 'F',\n        'N': 'M'\n    },\n    'Age': {\n        290: 29\n    }\n})";
 }
 
+
+const ageLimit = () => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (columnUnique.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Find unique values' section.");
+  } else if (oldValue.value === "") {
+    return alert("Please enter the max limit in the 'old value' field, in the 'Replace values' section.");
+  } else if (newValue.value === "") {
+    return alert("Please enter the divisor in the 'new value' field, in the 'Replace values' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variableUnique.value + ".loc[" + variableUnique.value + "['" + columnUnique.value + "'] > " + oldValue.value + ", '" + columnUnique.value + "'] = " + variableUnique.value + ".loc[" + variableUnique.value + "['" + columnUnique.value + "'] > " + oldValue.value + ", '" + columnUnique.value + "'] / " + newValue.value;
+  }
+}
