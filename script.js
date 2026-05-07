@@ -53,3 +53,19 @@ const ageLimit = () => {
       document.editor.textbox.value+="\n" + variableUnique.value + ".loc[" + variableUnique.value + "['" + columnUnique.value + "'] > " + oldValue.value + ", '" + columnUnique.value + "'] = " + variableUnique.value + ".loc[" + variableUnique.value + "['" + columnUnique.value + "'] > " + oldValue.value + ", '" + columnUnique.value + "'] / " + newValue.value;
   }
 }
+
+//  Series duplicates
+let duplicateKeepSeries = document.editor.duplicateKeepSeries;
+
+const duplicateSeries = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else {
+      let keep = "";
+      if (duplicateKeepSeries.value) {
+        keep = "keep=" + duplicateKeepSeries.value;
+      }
+
+      document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
+  }
+}

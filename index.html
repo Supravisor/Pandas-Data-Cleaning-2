@@ -57,6 +57,18 @@
   <input type="button" class="btn btn-success" value="age limit" onclick="ageLimit();" />
 </p>
 
+<h3>Series duplicates</h3>
+
+<p>
+  <input type="button" class="btn btn-success" value="duplicated" onclick="duplicateSeries(this.value);" />
+  <input type="button" class="btn btn-success" value="drop_duplicates" onclick="duplicateSeries(this.value);" />
+  <select name="duplicateKeepSeries">
+    <option value=""></option>
+    <option value="'last'">last</option>
+    <option value="False">False</option>
+  </select>
+</p>
+
             </div>
           </td>
           <td id="textbox">
