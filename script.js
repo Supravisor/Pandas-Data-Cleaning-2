@@ -55,6 +55,8 @@ const ageLimit = () => {
 }
 
 //  Series duplicates
+let duplicateKeepSeries = document.editor.duplicateKeepSeries;
+
 const duplicateSeries = (arg) => {
   if (variableUnique.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
