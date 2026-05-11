@@ -69,3 +69,9 @@ const duplicateSeries = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
   }
 }
+
+const duplicateDataFrame = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  }
+}
