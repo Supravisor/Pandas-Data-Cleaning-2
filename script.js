@@ -72,6 +72,7 @@ const duplicateSeries = (arg) => {
 
 // DataFrame duplicates
 let duplicateSubset = document.getElementById("duplicateSubset");
+let duplicateKeepDataFrame = document.editor.duplicateKeepDataFrame;
 
 const duplicateDataFrame = (arg) => {
   if (variableUnique.value === "") {
