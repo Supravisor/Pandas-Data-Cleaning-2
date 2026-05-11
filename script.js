@@ -86,6 +86,16 @@ const duplicateDataFrame = (arg) => {
 
         document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
 
+      } else if (duplicateSubset.value) {
+
+          let keep = "subset=['" + duplicateSubset.value + "']";
+
+          document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
+
       }
   }
 }
+
+
+
+
