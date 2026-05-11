@@ -69,3 +69,34 @@ const duplicateSeries = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
   }
 }
+
+// DataFrame duplicates
+let duplicateSubset = document.getElementById("duplicateSubset");
+
+const duplicateDataFrame = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  }  else {
+      if (duplicateKeepDataFrame.value) {
+        if (duplicateSubset.value === "") {
+          return alert("Please enter a subset name, in the 'DataFrame duplicates' section.");
+        }
+
+        let keep = "subset=['" + duplicateSubset.value + "'], ";
+        if (duplicateKeepDataFrame.value) {
+          keep += "keep=" + duplicateKeepDataFrame.value;
+        }
+
+        document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
+
+      } else if (duplicateSubset.value) {
+
+          let keep = "subset=['" + duplicateSubset.value + "']";
+
+          document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
+
+      } else {
+          document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "()";
+      }
+  }
+}
