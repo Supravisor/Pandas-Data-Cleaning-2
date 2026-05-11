@@ -92,6 +92,8 @@ const duplicateDataFrame = (arg) => {
 
           document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "(" + keep + ")";
 
+      } else {
+          document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + "()";
       }
   }
 }
