@@ -70,6 +70,9 @@ const duplicateSeries = (arg) => {
   }
 }
 
+// DataFrame duplicates
+let duplicateSubset = document.getElementById("duplicateSubset");
+
 const duplicateDataFrame = (arg) => {
   if (variableUnique.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
@@ -97,7 +100,3 @@ const duplicateDataFrame = (arg) => {
       }
   }
 }
-
-
-
-
