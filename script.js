@@ -80,7 +80,7 @@ const duplicateDataFrame = (arg) => {
   }  else {
       if (duplicateKeepDataFrame.value) {
         if (duplicateSubset.value === "") {
-          return alert("Please enter a subset name, in the 'DataFrame duplicates' section.");
+          return alert("Please enter a subset name in the 'subset' field, in the 'DataFrame duplicates' section.");
         }
 
         let keep = "subset=['" + duplicateSubset.value + "'], ";
