@@ -104,6 +104,7 @@ const duplicateDataFrame = (arg) => {
 
 // Split columns
 let splitColumn = document.getElementById("splitColumn");
+let splitExpand = document.editor.splitExpand;
 
 const split = (arg) => {
   if (variableUnique.value === "") {
