@@ -104,3 +104,18 @@ const duplicateDataFrame = (arg) => {
 
 // Split columns
 let splitColumn = document.getElementById("splitColumn");
+
+const split = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (splitColumn.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Split columns' section.");
+  } else {
+      let expand = "";
+        if (splitExpand.value) {
+          expand = ", expand=" + splitExpand.value;
+        }
+
+      document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str." + arg + "('_'" + expand + ")";
+  }
+}
