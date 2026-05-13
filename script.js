@@ -101,3 +101,6 @@ const duplicateDataFrame = (arg) => {
       }
   }
 }
+
+// Split columns
+let splitColumn = document.getElementById("splitColumn");
