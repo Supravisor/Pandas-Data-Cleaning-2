@@ -137,3 +137,20 @@ const split = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str." + arg + "('_'" + expand + ")";
   }
 }
+
+// Check contents
+let containValue = document.getElementById("containValue");
+
+const contain = () => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (splitColumn.value === "") {
+      return alert("Please enter a column name in the 'column' field, in the 'Split columns' section.");
+  } else {
+      if (containValue.value) {
+        document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str.contains('" + containValue.value + "')";
+      } else {
+          document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str.contains('\\?')";
+      }
+  }
+}
