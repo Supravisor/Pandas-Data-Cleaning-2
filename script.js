@@ -154,3 +154,14 @@ const contain = () => {
       }
   }
 }
+
+// Remove whitespace
+const stringReplace = () => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (splitColumn.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Split columns' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str.replace(' ', '')";
+  }
+}
