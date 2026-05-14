@@ -175,3 +175,14 @@ const strip = (arg) => {
       document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str." + arg + "()";
   }
 }
+
+// Format
+const year = () => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (splitColumn.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Split columns' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variableUnique.value + "['" + splitColumn.value + "'].str.replace(r'(?P<year>\\d{4})\\?', lambda m: m.group('year'))";
+  }
+}
