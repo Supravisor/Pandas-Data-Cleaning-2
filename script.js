@@ -139,6 +139,8 @@ const split = (arg) => {
 }
 
 // Check contents
+let containValue = document.getElementById("containValue");
+
 const contain = () => {
   if (variableUnique.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
