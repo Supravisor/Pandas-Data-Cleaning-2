@@ -106,6 +106,23 @@ const duplicateDataFrame = (arg) => {
 let splitColumn = document.getElementById("splitColumn");
 let splitExpand = document.editor.splitExpand;
 
+const columns = (arg) => {
+  if (variableUnique.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
+  } else if (splitColumn.value === "") {
+    return alert("Please enter a column name in the 'column' field, in the 'Split columns' section.");
+  } else {
+      let column = splitColumn.value;
+
+      if (column.split("").includes(",")) {
+        let regex = /\s*,\s*/g;
+        column = column.replaceAll(regex, "', '");
+      }
+
+      document.editor.textbox.value+="\n" + variableUnique.value + "." + arg + " = ['" + column + "']";
+  }
+}
+
 const split = (arg) => {
   if (variableUnique.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Find unique values' section.");
